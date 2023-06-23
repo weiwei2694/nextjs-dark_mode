@@ -1,3 +1,4 @@
+import "./globals.css";
 import { Provider, ThemeSwitcher } from "@/components"
 
 export const metadata = {
@@ -10,8 +11,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Provider>
-          <ThemeSwitcher />
-          {children}
+          <main className="p-2 md:p-6">
+            <ThemeSwitcher />
+            {children}
+          </main>
         </Provider>
       </body>
     </html>
